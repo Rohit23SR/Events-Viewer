@@ -4,11 +4,11 @@ Deployed Application:
 🔗 http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com
 This is the production deployment hosted on AWS S3 (Static Website Hosting).
 
-Install, Build and Test
-npm install
-npm run dev
-npm run build
-npm run test
+#Install, Build and Test
+  npm install
+  npm run dev
+  npm run build
+  npm run test
 
 
 # Events Viewer Application – Tech Stack Documentation
