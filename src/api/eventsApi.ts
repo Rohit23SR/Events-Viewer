@@ -1,127 +1,166 @@
 import { apiClient } from './client';
 import { FALLBACK_DATA } from '../constants/fallbackData';
+import { getApiUrl } from '../config/env';
+import { logger } from '../utils/logger';
 import type { ApiResponse, FetchEventsResult } from '../types/api.types';
+import type { Event, Venue } from '../types/event.types';
 
+/**
+ * Fetches events from the API with automatic fallback to sample data
+ * @returns Promise containing event data and fallback status
+ */
 export const fetchEvents = async (): Promise<FetchEventsResult> => {
   try {
-    // Use CORS proxy to bypass CORS restrictions
-    let API_URL: string;
-    
-    if (process.env.NODE_ENV === 'development') {
-      // In development, use proxy path
-      API_URL = '/api/events/event-data.json';
-    } else {
-      // In production, use CORS proxy
-      const TEG_URL = 'https://teg-coding-challenge.s3.ap-southeast-2.amazonaws.com/events/event-data.json';
-      API_URL = `https://corsproxy.io/?${encodeURIComponent(TEG_URL)}`;
-    }
-    
-    console.log('Attempting to fetch from:', API_URL);
-    
-    const rawData = await apiClient.get<any>(API_URL);
-    
-    console.log('API call successful! Raw data:', rawData);
-    
-    // Check what structure the data actually has
+    const API_URL = getApiUrl();
+
+    logger.debug('Attempting to fetch from:', API_URL);
+
+    const rawData = await apiClient.get<unknown>(API_URL);
+
+    logger.debug('API call successful! Raw data:', rawData);
+
     if (!rawData) {
-      console.error('No data returned from API');
+      logger.error('No data returned from API');
       throw new Error('No data returned');
     }
-    
-    // The API might return data in a different structure
-    // Let's check for different possible structures
-    let events = null;
-    let venues = null;
-    
-    // Check if data is directly an array (just events)
-    if (Array.isArray(rawData)) {
-      console.log('Data is directly an array of events');
-      events = rawData;
-    }
-    // Check if data has events property
-    else if (rawData.events && Array.isArray(rawData.events)) {
-      console.log('Data has events property');
-      events = rawData.events;
-      venues = rawData.venues;
-    }
-    // Check if data is wrapped in _embedded (Ticketmaster format)
-    else if (rawData._embedded?.events) {
-      console.log('Data is in _embedded format');
-      events = rawData._embedded.events;
-    }
-    // Check if data has a different structure
-    else {
-      console.error('Unknown data structure:', Object.keys(rawData));
-      console.error('Full data:', rawData);
-      throw new Error('Unknown data structure');
-    }
+
+    const { events, venues } = parseApiResponse(rawData);
 
     if (!events || !Array.isArray(events)) {
-      console.error('No valid events array found');
+      logger.error('No valid events array found');
       throw new Error('No valid events array');
     }
 
-    console.log(`Found ${events.length} events to transform`);
+    logger.debug(`Found ${events.length} events to transform`);
 
-    // Transform API data to match our expected format
-    const transformedEvents = events.map((event: any, index: number) => {
-      try {
-        // Find the venue for this event (if venues exist)
-        const venue = venues?.find((v: any) => v.id === event.venueId);
-        
-        // Handle different date formats
-        const eventDate = event.startDate || event.dates?.start?.dateTime || event.dateTime || '';
-        
-        const transformed = {
-          id: event.id?.toString() || `event-${index}`,
-          name: event.name || event.title || 'Unnamed Event',
-          dates: {
-            start: {
-              dateTime: eventDate
-            },
-            timezone: venue?.timezone || event.timezone || undefined
-          },
-          info: event.description || event.info || undefined,
-          type: event.type || undefined,
-          _embedded: venue ? {
-            venues: [{
-              id: venue.id?.toString() || '',
-              name: venue.name || '',
-              city: venue.city ? { name: venue.city } : undefined,
-              state: venue.state ? { name: venue.state } : undefined,
-              address: {
-                line1: venue.address || undefined
-              },
-              postalCode: venue.postcode || venue.postalCode || undefined,
-              timezone: venue.timezone || undefined
-            }]
-          } : undefined
-        };
-        
-        return transformed;
-      } catch (err) {
-        console.error(`Error transforming event ${index}:`, err, event);
-        throw err;
-      }
-    });
-    
+    const transformedEvents = transformEvents(events, venues);
+
     const transformedData: ApiResponse = {
       _embedded: {
         events: transformedEvents
       }
     };
-    
-    console.log('Successfully transformed', transformedEvents.length, 'events from API');
-    console.log('First transformed event:', transformedEvents[0]);
-    console.log('Returning with isFallback: false');
-    
+
+    logger.info('Successfully transformed', transformedEvents.length, 'events from API');
+
     return { data: transformedData, isFallback: false };
-    
+
   } catch (error) {
-    // If API fails, use fallback data
-    console.error('API fetch or transform failed:', error);
-    console.error('Error details:', error instanceof Error ? error.message : error);
-    console.warn('Using fallback data instead');
+    logger.error('API fetch or transform failed:', error);
+    logger.warn('Using fallback data instead');
     return { data: FALLBACK_DATA, isFallback: true };
   }
 };
+
+/**
+ * Parses the API response to extract events and venues
+ * Supports multiple data formats for compatibility
+ */
+const parseApiResponse = (rawData: unknown): { events: unknown[] | null; venues: unknown[] | null } => {
+  let events: unknown[] | null = null;
+  let venues: unknown[] | null = null;
+
+  if (Array.isArray(rawData)) {
+    logger.debug('Data is directly an array of events');
+    events = rawData;
+  } else if (typeof rawData === 'object' && rawData !== null) {
+    const data = rawData as Record<string, unknown>;
+
+    if (data.events && Array.isArray(data.events)) {
+      logger.debug('Data has events property');
+      events = data.events;
+      venues = Array.isArray(data.venues) ? data.venues : null;
+    } else if (data._embedded && typeof data._embedded === 'object' && data._embedded !== null) {
+      const embedded = data._embedded as Record<string, unknown>;
+      if (Array.isArray(embedded.events)) {
+        logger.debug('Data is in _embedded format');
+        events = embedded.events;
+      }
+    } else {
+      logger.error('Unknown data structure:', Object.keys(data));
+      throw new Error('Unknown data structure');
+    }
+  } else {
+    throw new Error('Invalid data format');
+  }
+
+  return { events, venues };
+};
+
+/**
+ * Transforms raw event data into the application's Event format
+ */
+const transformEvents = (events: unknown[], venues: unknown[] | null): Event[] => {
+  return events.map((event: unknown, index: number) => {
+    try {
+      const eventData = event as Record<string, unknown>;
+      const venueData = findVenueForEvent(eventData, venues);
+
+      const eventDate = getEventDate(eventData);
+
+      const transformedEvent: Event = {
+        id: eventData.id?.toString() || `event-${index}`,
+        name: (eventData.name as string) || (eventData.title as string) || 'Unnamed Event',
+        dates: {
+          start: {
+            dateTime: eventDate
+          },
+          timezone: (venueData?.timezone as string) || (eventData.timezone as string) || undefined
+        },
+        info: (eventData.description as string) || (eventData.info as string) || undefined,
+        type: (eventData.type as string) || undefined,
+        _embedded: venueData ? {
+          venues: [formatVenue(venueData)]
+        } : undefined
+      };
+
+      return transformedEvent;
+    } catch (err) {
+      logger.error(`Error transforming event ${index}:`, err);
+      throw err;
+    }
+  });
+};
+
+/**
+ * Finds the venue associated with an event
+ */
+const findVenueForEvent = (event: Record<string, unknown>, venues: unknown[] | null): Record<string, unknown> | null => {
+  if (!venues || !event.venueId) return null;
+  return venues.find((v: unknown) => {
+    const venue = v as Record<string, unknown>;
+    return venue.id === event.venueId;
+  }) as Record<string, unknown> | null;
+};
+
+/**
+ * Extracts the event date from various possible formats
+ */
+const getEventDate = (event: Record<string, unknown>): string => {
+  if (typeof event.startDate === 'string') return event.startDate;
+
+  const dates = event.dates as Record<string, unknown> | undefined;
+  if (dates?.start && typeof dates.start === 'object' && dates.start !== null) {
+    const start = dates.start as Record<string, unknown>;
+    if (typeof start.dateTime === 'string') return start.dateTime;
+  }
+
+  if (typeof event.dateTime === 'string') return event.dateTime;
+
+  return '';
+};
+
+/**
+ * Formats venue data into the standard venue structure
+ */
+const formatVenue = (venue: Record<string, unknown>): Venue => ({
+  id: venue.id?.toString() || '',
+  name: (venue.name as string) || '',
+  city: venue.city ? { name: venue.city as string } : undefined,
+  state: venue.state ? { name: venue.state as string } : undefined,
+  address: {
+    line1: (venue.address as string) || undefined
+  },
+  postalCode: (venue.postcode as string) || (venue.postalCode as string) || undefined,
+  timezone: (venue.timezone as string) || undefined
+});

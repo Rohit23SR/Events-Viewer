@@ -1,15 +1,40 @@
+// Mock modules that use import.meta.env
+jest.mock('../../utils/logger', () => ({
+  logger: {
+    debug: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    group: jest.fn(),
+    groupEnd: jest.fn(),
+  },
+}));
+
+jest.mock('../../config/env', () => ({
+  env: {
+    apiUrl: 'https://test-api.com/events.json',
+    corsProxyUrl: 'https://corsproxy.io/?',
+    isDevelopment: false,
+    isProduction: true,
+    features: {
+      darkMode: true,
+      search: true,
+      sorting: true,
+    },
+  },
+  getApiUrl: jest.fn(() => 'https://test-api.com/events.json'),
+}));
+
 import { fetchEvents } from '../eventsApi';
 import { apiClient } from '../client';
 import { FALLBACK_DATA } from '../../constants/fallbackData';
+import { logger } from '../../utils/logger';
 
 jest.mock('../client');
 
 describe('eventsApi', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    console.log = jest.fn();
-    console.warn = jest.fn();
-    console.error = jest.fn();
   });
 
   describe('fetchEvents', () => {
@@ -78,7 +103,7 @@ describe('eventsApi', () => {
 
       expect(result.isFallback).toBe(true);
       expect(result.data).toEqual(FALLBACK_DATA);
-      expect(console.warn).toHaveBeenCalled();
+      expect(logger.warn).toHaveBeenCalled();
     });
 
     it('should handle invalid data format', async () => {

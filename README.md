@@ -1,245 +1,288 @@
-🌐 Live URL
-Deployed Application:
+# Events Viewer
 
-🔗 http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com
-This is the production deployment hosted on AWS S3 (Static Website Hosting).
+A modern, professional React application for browsing and discovering upcoming events.
 
-Install, Build and Test
+## Live Demo
 
-1) npm install
-2) npm run dev
-3) npm run build
-4) npm run test
+**Deployed Application:** [http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com](http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com)
 
+## Features
 
-# Events Viewer Application – Tech Stack Documentation
+### Core Functionality
+- Browse upcoming events from live API
+- **Advanced Search** - Search events by name, venue, or description
+- **Smart Filtering** - Filter events by venue
+- **Flexible Sorting** - Sort by date (earliest/latest) or name (A-Z/Z-A)
+- **Dark Mode** - Full dark/light/system theme support with persistence
+- View detailed event information in modal
+- Responsive design for mobile, tablet, and desktop
 
-## 1. Core Technologies
+### Technical Highlights
+- **Environment-based Configuration** - Centralized environment variables
+- **Production-ready Logging** - Development-only console output
+- **Input Validation** - Zod schemas for runtime type safety
+- **Performance Optimized** - Memoized components and debounced search
+- **Accessibility** - Keyboard navigation and focus management
+- **Error Resilience** - Graceful fallback to sample data
 
-### React 18.2.0
-**What:** JS library for building UI  
-**Used For:**  
-- Reusable components (`EventCard`, `EventDetail`, `VenueSelector`)  
-- State management (`useState`, `useEffect`, `useMemo`)  
-- Interactive UI using Virtual DOM  
-**Why:** Component-based, performant, industry standard  
+## Quick Start
 
-### TypeScript 5.2.2
-**What:** Typed superset of JavaScript  
-**Used For:**  
-- Type safety for events, venues, API responses  
-- Compile-time error detection  
-- Improved IDE support and maintainability  
-**Why:** Prevents bugs and improves developer experience  
+```bash
+# Install dependencies
+npm install
 
----
+# Run development server
+npm run dev
 
-## 2. Build Tools & Development
+# Build for production
+npm run build
 
-### Vite 5.0.8
-**What:** Fast build tool  
-**Used For:**  
-- HMR and dev server  
-- Optimized production builds  
-- TypeScript compilation and CORS proxying  
-**Why:** Faster and modern alternative to CRA  
+# Run tests
+npm run test
+```
 
-### @vitejs/plugin-react 4.2.1
-**What:** React plugin for Vite  
-**Used For:**  
-- Fast Refresh  
-- JSX/TSX support and React optimizations  
-**Why:** Required for React + Vite setup  
+## Environment Configuration
 
----
+Copy `.env.example` to `.env.local` for local development:
 
-## 3. Styling
+```bash
+# API Configuration
+VITE_API_URL=https://your-api-endpoint.com/events.json
 
-### Tailwind CSS 3.3.6
-**What:** Utility-first CSS framework  
-**Used For:**  
-- Styling, layout, typography, responsiveness  
-- Hover, transition, and animation utilities  
-**Why:** Rapid development and small bundle size  
-
-### PostCSS 8.4.32 + Autoprefixer 10.4.16
-**Used For:**  
-- Processing Tailwind CSS  
-- Adding vendor prefixes automatically  
-**Why:** Ensures browser compatibility  
+# Feature Flags
+VITE_ENABLE_DARK_MODE=true
+VITE_ENABLE_SEARCH=true
+VITE_ENABLE_SORTING=true
+```
 
 ---
 
-## 4. Icons
+## Tech Stack
 
-### Lucide React 0.263.1
-**Used For:**  
-- UI icons like Calendar, Clock, MapPin, ChevronDown, RefreshCw  
-**Why:** Lightweight, consistent, and TypeScript-friendly  
+### Core Technologies
 
----
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React** | 18.2.0 | Component-based UI library |
+| **TypeScript** | 5.2.2 | Type safety and developer experience |
+| **Vite** | 5.0.8 | Fast build tool with HMR |
+| **Tailwind CSS** | 3.3.6 | Utility-first styling framework |
 
-## 5. State Management
+### New Professional Dependencies
 
-### React Context API
-**Used For:**  
-- Global state (`selectedVenue`, `selectedEvent`)  
-- Avoiding prop drilling  
-**Why:** Simple and sufficient for app needs  
+| Package | Purpose |
+|---------|---------|
+| **@tanstack/react-query** | Data fetching, caching, and synchronization |
+| **Zod** | Runtime schema validation |
+| **use-debounce** | Performance optimization for search |
 
-### React Hooks
-**Used For:**  
-- `useState`, `useEffect`, `useMemo`, `useContext`  
-- Custom hooks (`useEventsData`) for data fetching  
-**Why:** Modular and reusable logic  
+### Development Tools
 
----
-
-## 6. Code Quality & Linting
-
-- **ESLint 8.55.0:** Code quality and bug prevention  
-- **@typescript-eslint/eslint-plugin 6.14.0:** TypeScript-specific linting  
-- **eslint-plugin-react-hooks 4.6.0:** Ensures correct hook usage  
+- **ESLint** - Code quality and linting
+- **Jest** - Unit testing framework
+- **Testing Library** - Component testing utilities
+- **PostCSS + Autoprefixer** - CSS processing
 
 ---
 
-## 7. Architecture Patterns
+## Architecture
 
-- **Custom Hooks Pattern:** `useEventsData()`, `useAppContext()`  
-- **Error Boundary Pattern:** Graceful error handling  
-- **Compound Component Pattern:** Shared context (`<AppProvider><EventList/></AppProvider>`)  
-- **Container/Presenter Pattern:** Logic in `EventList`, UI in `EventCard`  
-
----
-
-## 8. API & Data Handling
-
-- **Fetch API:** For HTTP requests, supports `AbortController`  
-- **Vite Proxy:** Bypasses CORS during development  
-**Why:** Native, modern, and no extra dependencies  
-
----
-
-## 9. Error Handling Strategy
-
-- **Error Boundary:** React-level fallback UI  
-- **Try-Catch:** For API and async operations  
-- **Custom Error Classes:** Structured error data  
-- **Fallback Data:** Keeps app functional if API fails  
-- **User Feedback:** Loading, error, and empty states  
-
----
-
-## 10. Type System Architecture
-
-- **Type Files:** `event.types.ts`, `api.types.ts`, `venue.types.ts`  
-- **Type Safety:** For props, state, API responses, and functions  
-
----
-
-## 11. Performance Optimizations
-
-- **useMemo:** Prevents expensive recalculations  
-- **Lazy Evaluation:** Conditional rendering only when needed  
-- **Code Splitting:** Vite auto-optimizes bundles  
-
----
-
-## 12. Development Tools
-
-- **TypeScript Compiler:** Type checking and compilation  
-- **Vite Dev Server:** HMR for instant updates  
-- **Browser DevTools:** React DevTools + source maps  
-
----
-
-## 13. Folder Structure
+### Folder Structure
 ```
 src/
-├── api/          # API client
-├── components/   # UI components
-├── context/      # Global state
-├── hooks/        # Custom hooks
-├── types/        # Type definitions
-├── utils/        # Helpers
-├── constants/    # Static fallback data
-├── App.tsx       # Root component
-├── main.tsx      # Entry point
-└── index.css     # Global styles
+├── api/              # HTTP client and API calls
+│   ├── client.ts     # Generic HTTP client with timeout
+│   └── eventsApi.ts  # Event-specific API operations
+├── components/       # React UI components
+│   ├── EventList.tsx       # Main container with filtering
+│   ├── EventCard.tsx       # Event card (memoized)
+│   ├── EventDetail.tsx     # Event modal (memoized)
+│   ├── VenueSelector.tsx   # Venue filter dropdown
+│   ├── SearchInput.tsx     # Debounced search input
+│   ├── SortSelector.tsx    # Sort options dropdown
+│   ├── ThemeToggle.tsx     # Dark mode toggle
+│   ├── LoadingSpinner.tsx  # Loading indicator
+│   └── ErrorBoundary.tsx   # Error handling wrapper
+├── config/           # Environment configuration
+│   └── env.ts        # Type-safe environment variables
+├── context/          # React Context providers
+│   ├── AppContext.tsx      # App state context
+│   ├── AppProvider.tsx     # App state provider
+│   └── ThemeContext.tsx    # Theme management
+├── hooks/            # Custom React hooks
+│   └── useEventsData.ts    # Data fetching hook
+├── types/            # TypeScript definitions
+│   ├── event.types.ts      # Event and Venue types
+│   ├── api.types.ts        # API response types
+│   ├── schemas.ts          # Zod validation schemas
+│   └── venue.types.ts      # Venue type exports
+├── utils/            # Utility functions
+│   ├── logger.ts           # Environment-aware logging
+│   ├── dateFormatter.ts    # Date/time formatting
+│   └── errorHandler.ts     # Error handling utilities
+├── constants/        # Static data
+│   └── fallbackData.ts     # Offline fallback events
+├── App.tsx           # Root application component
+├── main.tsx          # React DOM entry point
+└── index.css         # Global styles with dark mode
 ```
-**Why:** Clear separation, scalable, industry standard  
+
+### Design Patterns
+
+1. **Container/Presenter Pattern**
+   - `EventList` handles logic, `EventCard` handles presentation
+
+2. **Custom Hooks Pattern**
+   - `useEventsData()` - Data fetching and state management
+   - `useTheme()` - Theme context access
+   - `useAppContext()` - App state access
+
+3. **Error Boundary Pattern**
+   - Catches React errors and displays fallback UI
+
+4. **Memoization Pattern**
+   - Components wrapped with `React.memo()` for performance
+   - `useMemo()` for expensive computations
+   - `useCallback()` for stable function references
+
+5. **Provider Pattern**
+   - `ThemeProvider` - Theme state management
+   - `AppProvider` - Application state management
 
 ---
 
-## 14. Local Development, Build & Test Process
+## Key Features
 
-### Install Dependencies
+### Dark Mode Support
+- Toggle between Light, Dark, and System themes
+- Persists preference in localStorage
+- Smooth transitions between themes
+- Custom scrollbar styling in dark mode
+
+### Advanced Search
+- Real-time search with 300ms debounce
+- Searches across event names, descriptions, and venues
+- Clear search with single click
+- Shows search query in results header
+
+### Event Sorting
+- Sort by date (earliest first or latest first)
+- Sort alphabetically (A-Z or Z-A)
+- Maintains sort when filtering
+
+### Professional Logging
+- Development-only console output
+- Structured logging with levels (debug, info, warn, error)
+- No console pollution in production builds
+
+### Type Safety
+- Strict TypeScript configuration
+- Runtime validation with Zod schemas
+- Comprehensive type definitions for all data
+
+---
+
+## Performance Optimizations
+
+1. **Component Memoization** - Prevents unnecessary re-renders
+2. **Debounced Search** - Reduces API calls and re-renders
+3. **useMemo Hooks** - Caches expensive computations
+4. **useCallback Hooks** - Stable function references
+5. **Code Splitting** - Automatic chunk optimization by Vite
+6. **Tree Shaking** - Only includes used code in bundle
+
+---
+
+## Testing
+
 ```bash
-npm install
+# Run all tests
+npm run test
+
+# Watch mode
+npm run test -- --watch
+
+# Coverage report
+npm run test -- --coverage
 ```
 
-### Run Local Dev Server
-```bash
-npm run dev
+### Test Structure
 ```
-- Starts Vite development server at `http://localhost:5173`  
-- Includes Hot Module Replacement (HMR)
+src/
+├── api/__tests__/
+│   ├── client.test.ts
+│   └── eventsApi.test.ts
+├── components/__tests__/
+│   ├── EventCard.test.tsx
+│   ├── EventDetail.test.tsx
+│   ├── ErrorBoundary.test.tsx
+│   └── LoadingSpinner.test.tsx
+└── utils/__tests__/
+    ├── dateFormatter.test.ts
+    └── errorHandler.test.ts
+```
+
+---
+
+## Deployment
 
 ### Build for Production
 ```bash
 npm run build
 ```
-- Generates optimized static assets in the `dist` folder  
 
-### Preview Production Build
-```bash
-npm run preview
-```
-- Serves the production build locally for verification  
+Generates optimized static assets in `dist/` folder.
 
-### Run Unit Tests
-```bash
-npm run test
-```
-- Executes tests via **Jest** (configured for TypeScript + React)  
-- Displays pass/fail summary with coverage  
+### Environment Variables
+- `VITE_API_URL` - Main API endpoint
+- `VITE_CORS_PROXY_URL` - CORS proxy service
+- `VITE_ENABLE_*` - Feature flags
 
-### Watch Mode
-```bash
-npm run test:watch
-```
-- Automatically reruns tests on file changes  
-
-### Test File Naming Convention
-```
-src/
-└── __tests__/
-    ├── client.test.ts
-    ├── EventList.test.tsx
-    └── EventCard.test.tsx
-```
+### AWS S3 Deployment
+The application is configured for static hosting on AWS S3 with CloudFront CDN.
 
 ---
 
-## 15. Key Features Enabled by Stack
+## Error Handling
 
-- **Type Safety:** Fewer runtime bugs  
-- **Fast Development:** Vite + HMR  
-- **Modern UI:** React + Tailwind  
-- **Error Resilience:** Boundaries + fallback data  
-- **Performance:** useMemo and optimized bundles  
-- **Developer Experience:** ESLint, TypeScript, Vite
+1. **Error Boundaries** - Catch component-level errors
+2. **API Error Handling** - Structured error responses
+3. **Fallback Data** - Offline functionality with sample events
+4. **User Feedback** - Clear error messages and retry options
+5. **Logging** - Comprehensive error logging in development
 
 ---
 
-## 16. Production-Ready Features
+## Accessibility
 
-- TypeScript type safety  
-- Error boundaries and fallback data  
-- Loading and empty states  
-- Responsive design  
-- Clean, scalable architecture  
-- ESLint-enforced quality  
-- Optimized Vite builds  
-- Cross-browser compatibility  
-- Accessibility compliance
+- Keyboard navigation support
+- ARIA labels on interactive elements
+- Focus management in modals
+- High contrast in both light and dark modes
+- Responsive text sizing
+- Screen reader friendly
+
+---
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+---
+
+## Contributing
+
+1. Follow TypeScript strict mode
+2. Add JSDoc comments to public functions
+3. Write tests for new features
+4. Use meaningful commit messages
+5. Ensure ESLint passes with no errors
+
+---
+
+## License
+
+Private project for demonstration purposes.

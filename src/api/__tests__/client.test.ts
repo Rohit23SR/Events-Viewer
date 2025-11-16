@@ -1,3 +1,15 @@
+// Mock modules that use import.meta.env
+jest.mock('../../utils/logger', () => ({
+  logger: {
+    debug: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    group: jest.fn(),
+    groupEnd: jest.fn(),
+  },
+}));
+
 import { apiClient } from '../client';
 
 const mockFetch = jest.fn() as jest.MockedFunction<typeof fetch>;

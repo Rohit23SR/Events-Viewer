@@ -83,3 +83,7 @@ jest-test-results.json
 *.bak
 *.swp
 *~
+
+# AI/Editor tools
+.claude/
+nul
