@@ -100,12 +100,15 @@ Venues include Sydney Opera House, MCG, SCG, Rod Laver Arena, The Gabba, RAC Are
 
 ## Deployment
 
-Hosted on AWS S3 as a static website. Build and deploy:
+Hosted on AWS S3 as a static website (ap-southeast-2).
 
 ```bash
 npm run build
-# upload dist/ contents to S3 bucket
+aws s3 sync dist/ s3://teg-events-viewer --delete
 ```
+
+Live at: http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com
+API endpoint: http://teg-events-viewer.s3-website-ap-southeast-2.amazonaws.com/data/event-data.json
 
 ## License
 
