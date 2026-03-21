@@ -1,0 +1,1281 @@
+{
+  "_embedded": {
+    "events": [
+      {
+        "id": "evt-001",
+        "name": "Taylor Swift | The Eras Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-04-18T19:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Taylor Swift brings The Eras Tour to Sydney for a spectacular night celebrating every era of her legendary career. Expect stunning visuals, costume changes, and a setlist spanning from her debut to her latest album. An unmissable event for Swifties across Australia.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-002",
+        "name": "Ed Sheeran | Mathematics Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-04-25T19:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Ed Sheeran performs at the iconic Melbourne Cricket Ground as part of his record-breaking Mathematics Tour. With a career-spanning setlist and his signature loop-pedal magic, Sheeran transforms the stadium into an intimate experience for over 80,000 fans. Don't miss one of the biggest touring acts in the world.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-003",
+        "name": "Coldplay | Music of the Spheres World Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-05-03T19:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Coldplay's Music of the Spheres World Tour arrives at Rod Laver Arena for a night of anthemic hits and dazzling LED wristband spectacles. Chris Martin and the band deliver fan favourites from Yellow to My Universe in a show hailed as one of the most visually stunning live experiences ever. This sustainably powered tour is a must-see.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rla",
+              "name": "Rod Laver Arena",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-004",
+        "name": "Billie Eilish | HIT ME HARD AND SOFT Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-05-10T19:30:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "Billie Eilish brings her critically acclaimed HIT ME HARD AND SOFT Tour to Brisbane for an electrifying night of genre-defying music. The multi-Grammy winner performs tracks from her latest album alongside beloved hits like Bad Guy and Happier Than Ever. With brother Finneas by her side, expect an atmospheric and emotionally charged show.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-005",
+        "name": "The Weeknd | After Hours Til Dawn Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-05-17T20:00:00+08:00" },
+          "timezone": "Australia/Perth",
+          "status": { "code": "onsale" }
+        },
+        "info": "The Weeknd takes over RAC Arena in Perth with his cinematic After Hours Til Dawn Tour, featuring jaw-dropping stage design and a setlist packed with chart-topping hits. From Blinding Lights to Save Your Tears, Abel Tesfaye delivers a sensory overload of sound and spectacle. Perth fans are in for a once-in-a-generation live experience.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rac",
+              "name": "RAC Arena",
+              "city": { "name": "Perth" },
+              "state": { "name": "Western Australia", "stateCode": "WA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "700 Wellington Street" },
+              "postalCode": "6000",
+              "timezone": "Australia/Perth"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-006",
+        "name": "Dua Lipa | Radical Optimism Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-05-24T19:30:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "Dua Lipa brings the Radical Optimism Tour to Adelaide for a high-energy pop spectacular full of dancefloor anthems. From Levitating to Training Season, the superstar delivers a career-defining performance with world-class choreography and production. An unforgettable night for fans of modern pop at its finest.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-aec",
+              "name": "Adelaide Entertainment Centre",
+              "city": { "name": "Hindmarsh" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Port Road" },
+              "postalCode": "5007",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-007",
+        "name": "Tame Impala | Currents Anniversary Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-06-07T20:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Kevin Parker and Tame Impala celebrate the anniversary of their landmark album Currents with a special performance at the Sydney Opera House. The band performs the album in full alongside deep cuts and fan favourites in an intimate setting. A rare chance to experience one of Australia's greatest musical exports in a truly iconic venue.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-soh",
+              "name": "Sydney Opera House",
+              "city": { "name": "Sydney" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Bennelong Point" },
+              "postalCode": "2000",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-008",
+        "name": "Vance Joy | In Our Own Sweet Time Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-06-14T19:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Melbourne's own Vance Joy returns to Rod Laver Arena for a homecoming show as part of his In Our Own Sweet Time Tour. The folk-pop troubadour performs hits including Riptide, Georgia, and Missing Piece in a warm and uplifting live setting. A perfect winter evening with one of Australia's most beloved singer-songwriters.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rla",
+              "name": "Rod Laver Arena",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-009",
+        "name": "Flume | Palaces Live",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-06-21T20:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Grammy-winning electronic producer Flume brings his immersive Palaces Live show to Qudos Bank Arena for a night of boundary-pushing audiovisual performance. Harley Streten delivers tracks from Palaces and his acclaimed back catalogue with cutting-edge visuals and a thundering sound system. A landmark event for electronic music fans across Australia.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-010",
+        "name": "Gang of Youths | Angel in Realtime Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-06-28T19:30:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "Gang of Youths deliver their emotionally charged Angel in Realtime Tour at the Brisbane Entertainment Centre. Dave Le'aupepe and the band perform their ARIA Award-winning material with raw intensity and anthemic energy. A must-see for fans of passionate, heart-on-sleeve rock music.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-011",
+        "name": "Midnight Oil | Final Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-07-05T19:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Australian rock legends Midnight Oil perform their farewell show at the Sydney Opera House, closing out a career that defined a generation. Peter Garrett and the band deliver Beds Are Burning, Blue Sky Mine, and decades of politically charged anthems one last time. A historic night celebrating one of the most important bands in Australian music history.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-soh",
+              "name": "Sydney Opera House",
+              "city": { "name": "Sydney" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Bennelong Point" },
+              "postalCode": "2000",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-012",
+        "name": "Arctic Monkeys | The Car Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-07-12T19:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Arctic Monkeys bring The Car Tour to Melbourne & Olympic Parks, performing tracks from their critically acclaimed album alongside indie rock classics. Alex Turner and the Sheffield four-piece deliver a setlist spanning from I Bet You Look Good on the Dancefloor to Body Paint. One of the biggest UK bands of the century returns to Australian shores.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mnp",
+              "name": "Melbourne & Olympic Parks",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-013",
+        "name": "Olivia Rodrigo | GUTS World Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-07-19T19:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Olivia Rodrigo brings her explosive GUTS World Tour to Qudos Bank Arena for a night of pop-punk energy and emotional ballads. The Gen-Z superstar performs hits including Vampire, Good 4 U, and Drivers License with fierce stage presence and undeniable charisma. A high-energy show that has captivated audiences worldwide.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-014",
+        "name": "Hozier | Unreal Unearth Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-08-01T19:30:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "Irish singer-songwriter Hozier brings the Unreal Unearth Tour to Adelaide for an evening of soulful, literary-inspired music. From the global smash Take Me to Church to newer tracks like Too Sweet, Hozier's rich vocals fill the venue with warmth and depth. A captivating live performer at the peak of his powers.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-aec",
+              "name": "Adelaide Entertainment Centre",
+              "city": { "name": "Hindmarsh" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Port Road" },
+              "postalCode": "5007",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-015",
+        "name": "Post Malone | F-1 Trillion Tour",
+        "type": "Concert",
+        "dates": {
+          "start": { "dateTime": "2026-08-08T20:00:00+08:00" },
+          "timezone": "Australia/Perth",
+          "status": { "code": "onsale" }
+        },
+        "info": "Post Malone heads to Perth's RAC Arena with his genre-bending F-1 Trillion Tour, blending country, hip-hop, and rock into one unforgettable show. Posty delivers fan favourites including Circles, Sunflower, and tracks from his country crossover album with infectious energy. A wildly entertaining performer who defies categorisation.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rac",
+              "name": "RAC Arena",
+              "city": { "name": "Perth" },
+              "state": { "name": "Western Australia", "stateCode": "WA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "700 Wellington Street" },
+              "postalCode": "6000",
+              "timezone": "Australia/Perth"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-016",
+        "name": "AFL Round 8: Collingwood vs Richmond",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-02T14:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "One of the AFL's fiercest rivalries takes centre stage as Collingwood face Richmond at the MCG in Round 8. The Magpies and Tigers deliver a blockbuster clash at the home of Australian football in front of a packed crowd. Expect high-intensity footy and an electric atmosphere in this marquee matchup.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-017",
+        "name": "AFL Round 10: Sydney Swans vs GWS Giants",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-16T14:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The Battle of the Bridge ignites as the Sydney Swans host the GWS Giants at the SCG in the biggest local derby in Sydney football. Both teams bring fierce pride and determination in this Round 10 clash that always delivers drama. A must-attend for AFL fans in New South Wales.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-scg",
+              "name": "Sydney Cricket Ground",
+              "city": { "name": "Moore Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Driver Avenue" },
+              "postalCode": "2021",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-018",
+        "name": "AFL Round 12: Brisbane Lions vs Gold Coast Suns",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-30T15:00:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "The QClash lights up The Gabba as the Brisbane Lions take on the Gold Coast Suns in Round 12 of the AFL season. Queensland's fiercest football rivalry delivers fast-paced, physical footy under the Brisbane sun. A great day out for fans of both clubs at one of Australia's most atmospheric grounds.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-gab",
+              "name": "The Gabba",
+              "city": { "name": "Woolloongabba" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Vulture Street" },
+              "postalCode": "4102",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-019",
+        "name": "AFL Round 14: Adelaide Crows vs Port Adelaide",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-06-13T13:30:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "The Showdown delivers once again as the Adelaide Crows clash with Port Adelaide at the magnificent Adelaide Oval in Round 14. South Australia's biggest sporting rivalry draws a capacity crowd and creates an atmosphere unlike any other in the AFL. Two proud clubs leave everything on the field in this must-watch contest.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-ado",
+              "name": "Adelaide Oval",
+              "city": { "name": "North Adelaide" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "War Memorial Drive" },
+              "postalCode": "5006",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-020",
+        "name": "AFL Round 16: Melbourne vs Western Bulldogs",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-06-27T14:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Melbourne take on the Western Bulldogs at the MCG in a pivotal Round 16 encounter between two sides with premiership ambitions. The Demons and Bulldogs bring contrasting styles that make for compelling viewing at the home of football. A crucial mid-season clash with finals implications on the line.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-021",
+        "name": "AFL Round 18: Geelong vs Hawthorn",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-07-11T14:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Two of the AFL's most successful clubs collide as Geelong take on Hawthorn at the MCG in Round 18. The Cats and Hawks share one of football's richest rivalries, with decades of finals battles adding fire to every contest. A blockbuster matchup that never disappoints the faithful at the G.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-022",
+        "name": "AFL Semi Final",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-09-05T14:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "The pressure intensifies as two top-eight sides battle for a place in the AFL Preliminary Final at the MCG. September footy at its finest, where every contest is magnified and the stakes couldn't be higher. Experience the roar of the crowd as the race for the flag heats up.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-023",
+        "name": "AFL Grand Final 2026",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-09-26T14:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "The biggest day on the Australian sporting calendar as two teams compete for the AFL Premiership Cup at the MCG. Over 100,000 fans pack into the hallowed ground for the Grand Final, the culmination of a gruelling season. Grand Final Day is a national event that transcends sport and unites the country.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-024",
+        "name": "Australia vs India — 1st Test Day 1",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-04-10T10:30:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "offsale" }
+        },
+        "info": "The Border-Gavaskar Trophy series begins at The Gabba as Australia host India in the first Test. Brisbane's fortress ground sets the stage for one of cricket's greatest rivalries, with both teams eager to claim early series momentum. Day one promises fierce fast bowling and world-class batsmanship under Queensland skies.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-gab",
+              "name": "The Gabba",
+              "city": { "name": "Woolloongabba" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Vulture Street" },
+              "postalCode": "4102",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-025",
+        "name": "Australia vs India — 2nd Test Day 1",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-04-24T14:00:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "offsale" }
+        },
+        "info": "The iconic Adelaide Oval hosts the second Test between Australia and India under lights in a day-night spectacular with the pink ball. Adelaide has become synonymous with dramatic Test cricket, and the India series promises no different. A magnificent setting for one of world cricket's premier contests.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-ado",
+              "name": "Adelaide Oval",
+              "city": { "name": "North Adelaide" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "War Memorial Drive" },
+              "postalCode": "5006",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-026",
+        "name": "Australia vs India — 3rd Test Day 1",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-08T10:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "The Boxing Day Test atmosphere comes early as the MCG hosts the third Test between Australia and India in the Border-Gavaskar Trophy. Over 80,000 fans are expected on day one at the world's largest cricket ground for this marquee clash. The MCG delivers a sporting spectacle unlike any other venue on earth.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-027",
+        "name": "Australia vs India — 4th Test Day 1",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-22T10:30:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The SCG plays host to the fourth and potentially series-deciding Test between Australia and India. Steeped in over a century of cricketing history, the Sydney Cricket Ground provides a picturesque backdrop for this titanic rivalry. A gripping contest awaits as both sides fight for Border-Gavaskar Trophy supremacy.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-scg",
+              "name": "Sydney Cricket Ground",
+              "city": { "name": "Moore Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Driver Avenue" },
+              "postalCode": "2021",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-028",
+        "name": "Australia vs England — T20 International",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-10-10T19:00:00+11:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Australia and England renew their ancient rivalry in a blockbuster T20 International under lights at the MCG. The oldest rivalry in cricket takes on a modern twist with explosive batting, death bowling, and non-stop action. A thrilling night of limited-overs cricket at the home of the Big Bash.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mcg",
+              "name": "Melbourne Cricket Ground",
+              "city": { "name": "Richmond" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Brunton Avenue" },
+              "postalCode": "3002",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-029",
+        "name": "NRL Round 12: Broncos vs Storm",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-05-23T15:00:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "The Brisbane Broncos host the Melbourne Storm at The Gabba in a heavyweight NRL Round 12 clash between two perennial powerhouses. This fixture has produced some of rugby league's most memorable moments over the years. Expect bone-crunching defence, brilliant attack, and an atmosphere only Broncos fans can create.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-gab",
+              "name": "The Gabba",
+              "city": { "name": "Woolloongabba" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Vulture Street" },
+              "postalCode": "4102",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-030",
+        "name": "NRL Round 18: Roosters vs Rabbitohs",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-07-04T15:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The greatest rivalry in rugby league history continues as the Sydney Roosters take on the South Sydney Rabbitohs at the SCG. Dating back over a century, the Roosters-Rabbitohs clash is always played with unmatched intensity and tribal passion. A sell-out crowd is guaranteed for this Round 18 blockbuster.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-scg",
+              "name": "Sydney Cricket Ground",
+              "city": { "name": "Moore Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Driver Avenue" },
+              "postalCode": "2021",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-031",
+        "name": "NRL Semi Final",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-09-12T16:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The NRL finals series reaches boiling point as two contenders battle for a spot in the Preliminary Final at Qudos Bank Arena. Finals footy is where legends are made, with every tackle, every try, and every moment carrying season-defining weight. The road to the Grand Final runs through Sydney.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-032",
+        "name": "NRL Grand Final 2026",
+        "type": "Sports",
+        "dates": {
+          "start": { "dateTime": "2026-10-03T16:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The NRL Grand Final brings the rugby league season to a thrilling conclusion at Qudos Bank Arena. Two teams that have survived the gruelling finals series face off for the Provan-Summons Trophy in the biggest game in rugby league. Grand Final day is a celebration of the toughest sport in the world.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-033",
+        "name": "Hamilton",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-04-15T19:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Lin-Manuel Miranda's revolutionary hip-hop musical Hamilton takes the stage at Melbourne's stunning Princess Theatre. The story of American founding father Alexander Hamilton is told through a groundbreaking blend of hip-hop, jazz, R&B, and Broadway tradition. A cultural phenomenon that has redefined musical theatre for a new generation.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-pts",
+              "name": "Princess Theatre",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "163 Spring Street" },
+              "postalCode": "3000",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-034",
+        "name": "Wicked",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-05-06T19:30:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The spellbinding musical Wicked returns to the Sydney Opera House, telling the untold story of the witches of Oz before Dorothy dropped in. With show-stopping numbers including Defying Gravity and Popular, this production features a stellar Australian cast and breathtaking stagecraft. A magical night of theatre that enchants audiences of all ages.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-soh",
+              "name": "Sydney Opera House",
+              "city": { "name": "Sydney" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Bennelong Point" },
+              "postalCode": "2000",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-035",
+        "name": "Les Mis\u00e9rables",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-06-03T19:30:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "The world's longest-running musical Les Mis\u00e9rables arrives at the Adelaide Entertainment Centre in a stunning new production. Victor Hugo's epic tale of broken dreams and redemption features iconic songs including I Dreamed a Dream, One Day More, and On My Own. A timeless masterpiece that continues to move audiences worldwide.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-aec",
+              "name": "Adelaide Entertainment Centre",
+              "city": { "name": "Hindmarsh" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Port Road" },
+              "postalCode": "5007",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-036",
+        "name": "The Phantom of the Opera",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-07-08T19:30:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Andrew Lloyd Webber's The Phantom of the Opera haunts the Princess Theatre in a lavish new staging of the beloved classic. The legendary chandelier, the underground lake, and the Phantom's haunting melodies combine for an evening of pure theatrical grandeur. Melbourne's historic Princess Theatre provides the perfect gothic setting for this timeless romance.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-pts",
+              "name": "Princess Theatre",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "163 Spring Street" },
+              "postalCode": "3000",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-037",
+        "name": "Come From Away",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-08-12T19:30:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "The heartwarming true story of Come From Away lands at the Brisbane Entertainment Centre, telling the tale of 7,000 stranded passengers welcomed by the small town of Gander, Newfoundland after 9/11. With its joyous Celtic-infused score and ensemble cast, this Tony Award-winning musical celebrates the best of humanity. A deeply moving and uplifting theatrical experience.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-038",
+        "name": "SIX: The Musical",
+        "type": "Theatre",
+        "dates": {
+          "start": { "dateTime": "2026-09-03T19:30:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The six wives of Henry VIII take the mic and reclaim their narratives in SIX: The Musical at the Sydney Opera House. This electrifying pop-concert musical transforms Tudor queens into modern-day pop stars in a 75-minute powerhouse performance. A fresh, feminist, and fiercely entertaining reimagining of history that has taken the world by storm.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-soh",
+              "name": "Sydney Opera House",
+              "city": { "name": "Sydney" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Bennelong Point" },
+              "postalCode": "2000",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-039",
+        "name": "Hannah Gadsby: Body of Work",
+        "type": "Comedy",
+        "dates": {
+          "start": { "dateTime": "2026-04-22T20:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Emmy-nominated comedian Hannah Gadsby returns to the Sydney Opera House with Body of Work, a new show that blends sharp wit with her signature storytelling style. Following the groundbreaking success of Nanette and Douglas, Gadsby continues to push the boundaries of stand-up comedy. An evening of intelligent humour and unforgettable insights from one of Australia's most important comedic voices.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-soh",
+              "name": "Sydney Opera House",
+              "city": { "name": "Sydney" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Bennelong Point" },
+              "postalCode": "2000",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-040",
+        "name": "Jim Jefferies: Give Me Your Money",
+        "type": "Comedy",
+        "dates": {
+          "start": { "dateTime": "2026-05-15T20:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Australian comedy export Jim Jefferies returns home with his hilariously irreverent Give Me Your Money tour at Rod Laver Arena. Known for his unapologetically brash humour and razor-sharp observations, Jefferies delivers a no-holds-barred evening of laughs. Not for the faint-hearted, but guaranteed to leave you in stitches.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rla",
+              "name": "Rod Laver Arena",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-041",
+        "name": "Celeste Barber: Fine, Thanks",
+        "type": "Comedy",
+        "dates": {
+          "start": { "dateTime": "2026-06-10T20:00:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "Social media sensation and comedian Celeste Barber brings her Fine, Thanks tour to the Brisbane Entertainment Centre for a night of side-splitting observational comedy. Best known for her viral celebrity parodies, Barber proves she's equally hilarious on stage with her relatable humour and infectious energy. A feel-good comedy night that celebrates the perfectly imperfect.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-042",
+        "name": "Wil Anderson: WILEGAL",
+        "type": "Comedy",
+        "dates": {
+          "start": { "dateTime": "2026-07-18T20:00:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "Veteran Australian comedian Wil Anderson brings WILEGAL to Adelaide for a masterclass in stand-up comedy. A Melbourne International Comedy Festival stalwart, Anderson delivers sharp political satire and absurdist humour honed over decades of performing. Quick-witted, fearless, and endlessly entertaining, this is comedy at its sharpest.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-aec",
+              "name": "Adelaide Entertainment Centre",
+              "city": { "name": "Hindmarsh" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Port Road" },
+              "postalCode": "5007",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-043",
+        "name": "Trevor Noah: Off the Record Tour",
+        "type": "Comedy",
+        "dates": {
+          "start": { "dateTime": "2026-08-22T20:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "Former Daily Show host Trevor Noah brings his Off the Record Tour to Qudos Bank Arena for an evening of world-class comedy. The South African-born comedian delivers hilarious takes on global culture, politics, and the absurdities of modern life with effortless charm. A globally acclaimed performer at the top of his game.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-044",
+        "name": "Splendour in the Grass 2026",
+        "type": "Festival",
+        "dates": {
+          "start": { "dateTime": "2026-07-24T11:00:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "Australia's premier music festival Splendour in the Grass returns for 2026 with a stacked lineup across three days of live music, art, and culture. Featuring a diverse mix of international headliners and homegrown talent across multiple stages, Splendour is the highlight of the Australian festival calendar. An immersive weekend celebrating the best in contemporary music.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-045",
+        "name": "Falls Festival 2026",
+        "type": "Festival",
+        "dates": {
+          "start": { "dateTime": "2026-09-19T12:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Falls Festival brings its legendary multi-genre lineup to Melbourne & Olympic Parks for a full day of live music, comedy, and arts. From indie rock to electronic, hip-hop to folk, Falls delivers something for every music lover in a vibrant festival atmosphere. One of Australia's most beloved festivals celebrates another year of unforgettable performances.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mnp",
+              "name": "Melbourne & Olympic Parks",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-046",
+        "name": "Laneway Festival 2026",
+        "type": "Festival",
+        "dates": {
+          "start": { "dateTime": "2026-10-17T12:00:00+08:00" },
+          "timezone": "Australia/Perth",
+          "status": { "code": "onsale" }
+        },
+        "info": "Laneway Festival heads to Perth's RAC Arena precinct with a carefully curated lineup of the world's most exciting emerging and established artists. Known for championing cutting-edge music, Laneway delivers an all-day festival experience that feels intimate despite its massive scale. A day of discovery, dancing, and unforgettable live music in Western Australia.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rac",
+              "name": "RAC Arena",
+              "city": { "name": "Perth" },
+              "state": { "name": "Western Australia", "stateCode": "WA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "700 Wellington Street" },
+              "postalCode": "6000",
+              "timezone": "Australia/Perth"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-047",
+        "name": "Bluesfest 2026",
+        "type": "Festival",
+        "dates": {
+          "start": { "dateTime": "2026-08-15T11:00:00+10:00" },
+          "timezone": "Australia/Brisbane",
+          "status": { "code": "onsale" }
+        },
+        "info": "Bluesfest 2026 brings world-class blues, roots, and soul music to Brisbane for a full day of incredible live performances. Australia's most respected roots music festival showcases a diverse lineup of international legends and local heroes across multiple stages. A celebration of the music that forms the foundation of modern popular culture.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-bec",
+              "name": "Brisbane Entertainment Centre",
+              "city": { "name": "Boondall" },
+              "state": { "name": "Queensland", "stateCode": "QLD" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Melton Road" },
+              "postalCode": "4034",
+              "timezone": "Australia/Brisbane"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-048",
+        "name": "Van Gogh Alive",
+        "type": "Exhibition",
+        "dates": {
+          "start": { "dateTime": "2026-04-05T10:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "offsale" }
+        },
+        "info": "Step inside the vibrant world of Vincent van Gogh in this multi-sensory immersive exhibition at Melbourne & Olympic Parks. Over 3,000 images transform every surface into a living canvas, bringing masterworks like Starry Night and Sunflowers to life in breathtaking scale. A revolutionary art experience that lets you see, hear, and feel Van Gogh's genius like never before.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-mnp",
+              "name": "Melbourne & Olympic Parks",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-049",
+        "name": "Tutankhamun: Treasures of the Golden Pharaoh",
+        "type": "Exhibition",
+        "dates": {
+          "start": { "dateTime": "2026-05-01T10:00:00+10:00" },
+          "timezone": "Australia/Sydney",
+          "status": { "code": "onsale" }
+        },
+        "info": "The largest collection of Tutankhamun artefacts ever to leave Egypt arrives at Qudos Bank Arena for an exclusive Australian showing. Over 150 authentic artefacts from the boy king's tomb are displayed in a stunning theatrical setting that brings ancient Egypt to life. A once-in-a-lifetime opportunity to witness treasures that are over 3,000 years old.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-qbs",
+              "name": "Qudos Bank Arena",
+              "city": { "name": "Sydney Olympic Park" },
+              "state": { "name": "New South Wales", "stateCode": "NSW" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Edwin Flack Avenue" },
+              "postalCode": "2127",
+              "timezone": "Australia/Sydney"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-050",
+        "name": "Jurassic World: The Exhibition",
+        "type": "Exhibition",
+        "dates": {
+          "start": { "dateTime": "2026-06-20T10:00:00+09:30" },
+          "timezone": "Australia/Adelaide",
+          "status": { "code": "onsale" }
+        },
+        "info": "Walk among life-sized dinosaurs in Jurassic World: The Exhibition at the Adelaide Entertainment Centre. This immersive experience brings the blockbuster film franchise to life with animatronic dinosaurs, interactive exhibits, and breathtaking set designs straight from Isla Nublar. A thrilling adventure for families and fans of all ages that makes the impossible feel real.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-aec",
+              "name": "Adelaide Entertainment Centre",
+              "city": { "name": "Hindmarsh" },
+              "state": { "name": "South Australia", "stateCode": "SA" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Port Road" },
+              "postalCode": "5007",
+              "timezone": "Australia/Adelaide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "evt-051",
+        "name": "Immersive Monet & The Impressionists",
+        "type": "Exhibition",
+        "dates": {
+          "start": { "dateTime": "2026-08-28T10:00:00+10:00" },
+          "timezone": "Australia/Melbourne",
+          "status": { "code": "onsale" }
+        },
+        "info": "Immerse yourself in the luminous world of Claude Monet and the Impressionist masters at Rod Laver Arena in this stunning digital art experience. Wander through floor-to-ceiling projections of Water Lilies, Impression Sunrise, and works by Renoir, Degas, and Cezanne set to a symphonic soundtrack. A transformative journey through one of art history's most beloved movements.",
+        "_embedded": {
+          "venues": [
+            {
+              "id": "venue-rla",
+              "name": "Rod Laver Arena",
+              "city": { "name": "Melbourne" },
+              "state": { "name": "Victoria", "stateCode": "VIC" },
+              "country": { "name": "Australia", "countryCode": "AU" },
+              "address": { "line1": "Olympic Boulevard" },
+              "postalCode": "3001",
+              "timezone": "Australia/Melbourne"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

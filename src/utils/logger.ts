@@ -3,15 +3,15 @@
  * Only logs in development mode to keep production console clean
  */
 
-const isDevelopment = import.meta.env.DEV;
+const isDevelopment = import.meta.env.DEV
 
 interface Logger {
-  debug: (...args: unknown[]) => void;
-  info: (...args: unknown[]) => void;
-  warn: (...args: unknown[]) => void;
-  error: (...args: unknown[]) => void;
-  group: (label: string) => void;
-  groupEnd: () => void;
+  debug: (...args: unknown[]) => void
+  info: (...args: unknown[]) => void
+  warn: (...args: unknown[]) => void
+  error: (...args: unknown[]) => void
+  group: (label: string) => void
+  groupEnd: () => void
 }
 
 export const logger: Logger = {
@@ -20,7 +20,7 @@ export const logger: Logger = {
    */
   debug: (...args: unknown[]) => {
     if (isDevelopment) {
-      console.log('[DEBUG]', ...args);
+      console.log('[DEBUG]', ...args)
     }
   },
 
@@ -29,7 +29,7 @@ export const logger: Logger = {
    */
   info: (...args: unknown[]) => {
     if (isDevelopment) {
-      console.info('[INFO]', ...args);
+      console.info('[INFO]', ...args)
     }
   },
 
@@ -38,7 +38,7 @@ export const logger: Logger = {
    */
   warn: (...args: unknown[]) => {
     if (isDevelopment) {
-      console.warn('[WARN]', ...args);
+      console.warn('[WARN]', ...args)
     }
   },
 
@@ -46,7 +46,7 @@ export const logger: Logger = {
    * Error level logging - always logs (important for debugging)
    */
   error: (...args: unknown[]) => {
-    console.error('[ERROR]', ...args);
+    console.error('[ERROR]', ...args)
   },
 
   /**
@@ -54,7 +54,7 @@ export const logger: Logger = {
    */
   group: (label: string) => {
     if (isDevelopment) {
-      console.group(label);
+      console.group(label)
     }
   },
 
@@ -63,7 +63,7 @@ export const logger: Logger = {
    */
   groupEnd: () => {
     if (isDevelopment) {
-      console.groupEnd();
+      console.groupEnd()
     }
   },
-};
+}

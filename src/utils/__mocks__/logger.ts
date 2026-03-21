@@ -8,4 +8,4 @@ export const logger = {
   error: jest.fn(),
   group: jest.fn(),
   groupEnd: jest.fn(),
-};
+}

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 /**
  * Zod schemas for runtime validation of API responses
@@ -13,7 +13,7 @@ export const VenueSchema = z.object({
   postcode: z.string().optional(),
   postalCode: z.string().optional(),
   timezone: z.string().optional(),
-});
+})
 
 export const RawEventSchema = z.object({
   id: z.union([z.string(), z.number()]).transform(String),
@@ -26,12 +26,16 @@ export const RawEventSchema = z.object({
   startDate: z.string().optional(),
   dateTime: z.string().optional(),
   timezone: z.string().optional(),
-  dates: z.object({
-    start: z.object({
-      dateTime: z.string().optional(),
-    }).optional(),
-  }).optional(),
-});
+  dates: z
+    .object({
+      start: z
+        .object({
+          dateTime: z.string().optional(),
+        })
+        .optional(),
+    })
+    .optional(),
+})
 
 export const ApiResponseSchema = z.union([
   z.array(RawEventSchema),
@@ -44,7 +48,7 @@ export const ApiResponseSchema = z.union([
       events: z.array(RawEventSchema),
     }),
   }),
-]);
+])
 
-export type RawEvent = z.infer<typeof RawEventSchema>;
-export type RawVenue = z.infer<typeof VenueSchema>;
+export type RawEvent = z.infer<typeof RawEventSchema>
+export type RawVenue = z.infer<typeof VenueSchema>

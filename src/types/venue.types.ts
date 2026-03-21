@@ -1,1 +1,1 @@
-export type { Venue } from './event.types';
+export type { Venue } from './event.types'

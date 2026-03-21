@@ -1,32 +1,32 @@
-import type { Event } from './event.types';
+import type { Event } from './event.types'
 
 export interface ApiResponse {
   _embedded: {
-    events: Event[];
-  };
+    events: Event[]
+  }
   _links?: {
-    first?: { href: string };
-    self?: { href: string };
-    next?: { href: string };
-    last?: { href: string };
-  };
+    first?: { href: string }
+    self?: { href: string }
+    next?: { href: string }
+    last?: { href: string }
+  }
   page?: {
-    size: number;
-    totalElements: number;
-    totalPages: number;
-    number: number;
-  };
+    size: number
+    totalElements: number
+    totalPages: number
+    number: number
+  }
 }
 
 export interface FetchEventsResult {
-  data: ApiResponse;
-  isFallback: boolean;
+  data: ApiResponse
+  isFallback: boolean
 }
 
 export interface UseEventsDataState {
-  data: ApiResponse | null;
-  isLoading: boolean;
-  isError: boolean;
-  error: Error | null;
-  isFallback: boolean;
+  data: ApiResponse | null
+  isLoading: boolean
+  isError: boolean
+  error: Error | null
+  isFallback: boolean
 }

@@ -1,7 +1,7 @@
-import { ApiError, handleApiError } from '../utils/errorHandler';
-import { logger } from '../utils/logger';
+import { ApiError, handleApiError } from '../utils/errorHandler'
+import { logger } from '../utils/logger'
 
-const REQUEST_TIMEOUT = 10000;
+const REQUEST_TIMEOUT = 10000
 
 /**
  * HTTP client for API requests with timeout handling
@@ -14,33 +14,30 @@ export const apiClient = {
    * @throws ApiError on HTTP errors or network failures
    */
   async get<T>(url: string): Promise<T> {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT)
 
     try {
-      logger.debug('Fetching URL:', url);
+      logger.debug('Fetching URL:', url)
 
       const response = await fetch(url, {
         signal: controller.signal,
         headers: {
-          'Accept': 'application/json',
+          Accept: 'application/json',
         },
-      });
+      })
 
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId)
 
       if (!response.ok) {
-        throw new ApiError(
-          `HTTP error! status: ${response.status}`,
-          response.status
-        );
+        throw new ApiError(`HTTP error! status: ${response.status}`, response.status)
       }
 
-      const data = await response.json();
-      return data;
+      const data = await response.json()
+      return data
     } catch (error) {
-      clearTimeout(timeoutId);
-      throw handleApiError(error);
+      clearTimeout(timeoutId)
+      throw handleApiError(error)
     }
-  }
-};
+  },
+}

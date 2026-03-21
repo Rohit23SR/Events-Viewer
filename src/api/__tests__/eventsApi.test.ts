@@ -8,7 +8,7 @@ jest.mock('../../utils/logger', () => ({
     group: jest.fn(),
     groupEnd: jest.fn(),
   },
-}));
+}))
 
 jest.mock('../../config/env', () => ({
   env: {
@@ -23,19 +23,19 @@ jest.mock('../../config/env', () => ({
     },
   },
   getApiUrl: jest.fn(() => 'https://test-api.com/events.json'),
-}));
+}))
 
-import { fetchEvents } from '../eventsApi';
-import { apiClient } from '../client';
-import { FALLBACK_DATA } from '../../constants/fallbackData';
-import { logger } from '../../utils/logger';
+import { fetchEvents } from '../eventsApi'
+import { apiClient } from '../client'
+import { FALLBACK_DATA } from '../../constants/fallbackData'
+import { logger } from '../../utils/logger'
 
-jest.mock('../client');
+jest.mock('../client')
 
 describe('eventsApi', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-  });
+    jest.clearAllMocks()
+  })
 
   describe('fetchEvents', () => {
     it('should transform API data correctly', async () => {
@@ -56,19 +56,17 @@ describe('eventsApi', () => {
             state: 'NSW',
           },
         ],
-      };
+      }
 
-      (apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData);
+      ;(apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData)
 
-      const result = await fetchEvents();
+      const result = await fetchEvents()
 
-      expect(result.isFallback).toBe(false);
-      expect(result.data._embedded.events).toHaveLength(1);
-      expect(result.data._embedded.events[0].name).toBe('Test Event');
-      expect(result.data._embedded.events[0]._embedded?.venues?.[0].name).toBe(
-        'Test Venue'
-      );
-    });
+      expect(result.isFallback).toBe(false)
+      expect(result.data._embedded.events).toHaveLength(1)
+      expect(result.data._embedded.events[0].name).toBe('Test Event')
+      expect(result.data._embedded.events[0]._embedded?.venues?.[0].name).toBe('Test Venue')
+    })
 
     it('should match venues with events by venueId', async () => {
       const mockApiData = {
@@ -80,42 +78,36 @@ describe('eventsApi', () => {
           { id: 101, name: 'Venue A', city: 'Melbourne' },
           { id: 102, name: 'Venue B', city: 'Brisbane' },
         ],
-      };
+      }
 
-      (apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData);
+      ;(apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData)
 
-      const result = await fetchEvents();
+      const result = await fetchEvents()
 
-      expect(result.data._embedded.events[0]._embedded?.venues?.[0].name).toBe(
-        'Venue A'
-      );
-      expect(result.data._embedded.events[1]._embedded?.venues?.[0].name).toBe(
-        'Venue B'
-      );
-    });
+      expect(result.data._embedded.events[0]._embedded?.venues?.[0].name).toBe('Venue A')
+      expect(result.data._embedded.events[1]._embedded?.venues?.[0].name).toBe('Venue B')
+    })
 
     it('should return fallback data on API failure', async () => {
-      (apiClient.get as jest.Mock).mockRejectedValueOnce(
-        new Error('API Error')
-      );
+      ;(apiClient.get as jest.Mock).mockRejectedValueOnce(new Error('API Error'))
 
-      const result = await fetchEvents();
+      const result = await fetchEvents()
 
-      expect(result.isFallback).toBe(true);
-      expect(result.data).toEqual(FALLBACK_DATA);
-      expect(logger.warn).toHaveBeenCalled();
-    });
+      expect(result.isFallback).toBe(true)
+      expect(result.data).toEqual(FALLBACK_DATA)
+      expect(logger.warn).toHaveBeenCalled()
+    })
 
     it('should handle invalid data format', async () => {
-      (apiClient.get as jest.Mock).mockResolvedValueOnce({
+      ;(apiClient.get as jest.Mock).mockResolvedValueOnce({
         invalid: 'data',
-      });
+      })
 
-      const result = await fetchEvents();
+      const result = await fetchEvents()
 
-      expect(result.isFallback).toBe(true);
-      expect(result.data).toEqual(FALLBACK_DATA);
-    });
+      expect(result.isFallback).toBe(true)
+      expect(result.data).toEqual(FALLBACK_DATA)
+    })
 
     it('should handle missing venues array', async () => {
       const mockApiData = {
@@ -128,14 +120,14 @@ describe('eventsApi', () => {
           },
         ],
         venues: undefined,
-      };
+      }
 
-      (apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData);
+      ;(apiClient.get as jest.Mock).mockResolvedValueOnce(mockApiData)
 
-      const result = await fetchEvents();
+      const result = await fetchEvents()
 
-      expect(result.isFallback).toBe(false);
-      expect(result.data._embedded.events[0]._embedded).toBeUndefined();
-    });
-  });
-});
+      expect(result.isFallback).toBe(false)
+      expect(result.data._embedded.events[0]._embedded).toBeUndefined()
+    })
+  })
+})
