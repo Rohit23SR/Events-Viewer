@@ -84,6 +84,6 @@ jest-test-results.json
 *.swp
 *~
 
-# AI/Editor tools
+# Editor/tool config
 .claude/
 nul
