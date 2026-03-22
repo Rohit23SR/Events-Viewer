@@ -87,3 +87,4 @@ jest-test-results.json
 # Editor/tool config
 .claude/
 nul
+CLAUDE.md
