@@ -84,7 +84,5 @@ jest-test-results.json
 *.swp
 *~
 
-# Editor/tool config
-.claude/
+# Misc
 nul
-CLAUDE.md
